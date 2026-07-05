@@ -1,0 +1,93 @@
+=== CORS TESTS (fixed) ===
+=== https://www.vimeo.com ===
+HTTP/2 301 
+date: Sun, 05 Jul 2026 05:24:03 GMT
+content-type: text/html; charset=iso-8859-1
+location: https://vimeo.com/
+server: cloudflare
+expires: Sat, 07 Jun 2036 08:20:42 GMT
+age: 2149401
+via: 1.1 varnish (Varnish/6.0), 1.1 varnish, 1.1 varnish
+cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+x-varnish-cache: 1
+x-vserver: web-varnish-8549b448b5-clkws
+x-backend-proxy: web-varnish-8549b448b5-clkws
+x-bapp-server: 
+accept-ranges: bytes
+x-served-by: cache-iad-kcgs7200174-IAD, cache-chi-klot8100052-CHI
+x-cache: MISS, MISS
+x-cache-hits: 0, 0
+x-timer: S1783229043.248634,VS0,VE32
+vary: X-Geo-Vary-Group, Crossroads-Backend,x-http-method-override
+cf-cache-status: DYNAMIC
+
+---
+=== https://api.vimeo.com ===
+HTTP/2 401 
+date: Sun, 05 Jul 2026 05:24:03 GMT
+content-type: application/vnd.vimeo.error+json
+content-length: 207
+server: cloudflare
+access-control-allow-origin: https://evil.com
+access-control-allow-methods: GET, OPTIONS
+access-control-allow-headers: Accept,Authorization,Content-Type,Location,Origin,User-Agent,client,X-HTTP-METHOD-OVERRIDE,X-Requested-With,X-VUID,Vimeo-Page,Profiling,sentry-trace,Access-Control-Allow-Headers,Access-Control-Request-Method,Access-Control-Request-Headers,Traceparent,Tracestate,X-Datadog-Trace-Id,X-Datadog-Parent-Id,X-Datadog-Origin,X-Datadog-Sampling-Priority
+access-control-expose-headers: Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Location
+access-control-allow-credentials: true
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+www-authenticate: Bearer error="invalid_token"
+cache-control: no-store, no-cache, max-age=0
+request-hash: faaea639
+x-vimeo-error: true
+x-bapp-server: api-7c9b7bdb55-49k29
+x-backend-server: api-7c9b7bdb55-49k29
+accept-ranges: bytes
+via: 1.1 varnish, 1.1 varnish
+x-served-by: cache-iad-kcgs7200082-IAD, cache-chi-klot8100106-CHI
+
+---
+=== https://help.vimeo.com ===
+HTTP/2 302 
+content-type: text/html; charset=utf-8
+server: cloudflare
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=NrQbm21PSsnjF453kLNiFyq2MCc0%2FYg2yguD3PSzqrVwiGww5Dzwpg2XcGRXmu6IicCZk2U4OctTRrJ7FSRB6m7gSAcHi2TfnWuFSbepPWnnA1ZHJoRxis7SlP%2Bv39te"}]}
+x-ua-compatible: IE=edge
+location: https://help.vimeo.com/hc
+x-zendesk-processed-host-header: help.vimeo.com
+strict-transport-security: max-age=259200; includeSubDomains
+x-zendesk-origin-server: app-server-59d4d74774-ntknz
+cache-control: no-cache
+set-cookie: _help_center_session=anpKbG5WaVFPano0NVk1ZVFybFBmVm1hYmt2eTdJZzVaOE5ia0JpeXVrVkJyZEtBTEM0MExiQWRPUTlxeCtyaWxNK3FrOTZweEZvRHBDc0Y4bXZsMXc9PS0tM293TDdHNWpvbngvQnFIZUJBVHZZUT09--7e2b2c536358d7db17394e8d3d03374f6d99bd14; path=/; secure; httponly; SameSite=None
+set-cookie: __cf_bm=EoobY6EqChf6jaxEfdDlM_BDpoRHxM2d5eEOYYa8Fng-1783229043.9888463-1.0.1.1-SRuuDjpkrDmFOCA9gjJT.y1laPdbY._j50LTYn6p6XXhV7RR6mLk.JXN7xu.DlEMKUSPeyAWPh3gvnzSFfcz1PtQbr38FmPRX.KYrWHLpFPSNmZkOmWoOcp0Y0jQFRi6; HttpOnly; SameSite=None; Secure; Path=/; Domain=help.vimeo.com; Expires=Sun, 05 Jul 2026 05:54:04 GMT
+set-cookie: _cfuvid=EBqdfu1FJFKCpvWbQED49T3l_bxpQOqYcTbXxcHkoTM-1783229043.9888463-1.0.1.1-E8UpjziGo6rCr2wd4XQiW3FcSIj6lDp0lFI7nrNe9.s; HttpOnly; SameSite=None; Secure; Path=/; Domain=help.vimeo.com
+x-request-id: a163f0f4ef9e97ed-DUB
+x-runtime: 0.013253
+x-envoy-upstream-service-time: 18
+zendesk-service: help-center
+x-zendesk-zorg: yes
+via: zorg, 1.1 varnish
+
+---
+=== https://developer.vimeo.com ===
+HTTP/2 200 
+date: Sun, 05 Jul 2026 05:24:04 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+expires: Sun, 05 Jul 2026 05:39:04 GMT
+x-vimeo-device: d
+set-cookie: vuid=1185459005.386704939; expires=Wed, 02-Jul-2036 05:24:04 GMT; Max-Age=315360000; path=/; domain=.vimeo.com; secure; SameSite=None
+set-cookie: __cf_bm=rNH3zp9LEkyqM4notuENYFdXTZTIHdg1M3LuwU_.JaA-1783229044.8992443-1.0.1.1-mgA86xVliYlYDRlsxnglczZsKq44Rvk99sTBnfwnL5YUqfqkCtbyEp2Sx0OU8nmM.vfsnmqEIKpfI4QrHSamRD1OaYW.Chy8WMQY.LQCRgzbrmPHine65Y1skK6aOVWu; HttpOnly; SameSite=None; Secure; Path=/; Domain=vimeo.com; Expires=Sun, 05 Jul 2026 05:54:04 GMT
+x-ua-compatible: IE=edge
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-frame-options: sameorigin
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-bapp-server: pweb-8684644b5b-nt4mt
+age: 0
+via: 1.1 varnish (Varnish/6.0), 1.1 varnish, 1.1 varnish
+cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+x-varnish-cache: 0
+x-vserver: web-varnish-8549b448b5-clkws
+x-backend-proxy: web-varnish-8549b448b5-clkws
+
+---

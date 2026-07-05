@@ -1,0 +1,19 @@
+=== EXPOSED FILES ===
+--- https://www.vimeo.com/.env ---
+HTTP 403 | Size: 4805
+--- https://www.vimeo.com/.git/config ---
+HTTP 403 | Size: 4805
+--- https://www.vimeo.com/dump.sql ---
+HTTP 404 | Size: 164666
+--- https://www.vimeo.com/admin ---
+HTTP 404 | Size: 164666
+--- https://www.vimeo.com/api ---
+HTTP 404 | Size: 108480
+--- https://www.vimeo.com/robots.txt ---
+HTTP 200 | Size: 14293
+--- https://www.vimeo.com/.htaccess ---
+HTTP 403 | Size: 4805
+--- https://www.vimeo.com/backup ---
+HTTP 404 | Size: 108480
+--- https://www.vimeo.com/wp-admin ---
+HTTP 404 | Size: 164666
